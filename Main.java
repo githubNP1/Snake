@@ -58,6 +58,12 @@ public class Main extends JPanel implements KeyListener{
                     break;
             }
         }
+        
+        for(Segment s : full.segments){
+            if(!s.anchors.isEmpty()){
+                s.checkIfOnAnchor();
+            }
+        }
     }
     
     public static void main(String[] args){
